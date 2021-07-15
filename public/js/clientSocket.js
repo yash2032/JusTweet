@@ -1,6 +1,6 @@
 var connected = false;
 
-var socket = io()
+var socket = io();
 socket.emit("setup", userLoggedIn);
 
 socket.on("connected", () => connected = true);
