@@ -17,7 +17,8 @@ class Database {
     }
 
     connect() {
-        mongoose.connect(process.env.MONGODB_URL)
+        mongoose.set('useCreateIndex', true);
+        mongoose.connect("mongodb+srv://admin:Yash@12345@twitterclonecluster.xnpij.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
         .then(() => {
             console.log("database connection successful");
         })
