@@ -17,7 +17,7 @@ class Database {
     }
 
     connect() {
-        mongoose.connect("mongodb+srv://admin:Yash@12345@twitterclonecluster.xnpij.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+        mongoose.connect(process.env.MONGODB_URL)
         .then(() => {
             console.log("database connection successful");
         })

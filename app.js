@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use(session({
-    secret: "bbq chips",
+    secret: process.env.JWT_SECRET,
     resave: true,
     saveUninitialized: false
 }))
